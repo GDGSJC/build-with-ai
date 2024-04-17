@@ -1,0 +1,32 @@
+{
+  "name": "build-with-ai",
+  "version": "1.0.0",
+  "description": "Projeto para mostrar exemplos the aplicatibilidade com IA generativa no evento Build With IA",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GDGSJC/build-with-ai.git"
+  },
+  "keywords": [
+    "build",
+    "with",
+    "ai",
+    "google",
+    "generative"
+  ],
+  "author": "Fred Peixoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GDGSJC/build-with-ai/issues"
+  },
+  "homepage": "https://github.com/GDGSJC/build-with-ai#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.7.1",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5"
+  }
+}
