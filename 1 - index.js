@@ -7,11 +7,14 @@ const genAI = new GoogleGenerativeAI(key);
 
 async function run() {
   const model = genAI.getGenerativeModel({model: 'gemini-pro'});
-  const prompt = "Hello World!";
+  const prompt = "Hello World";
+  const {totalTokens} = await model.countTokens(prompt);
+  //  A token is approximately four characters. 
+  // 100 tokens correspond to roughly 60-80 words.
   const result = await model.generateContent(prompt);
-  const response = await result.response;
+  const response = result.response;
   const text = response.text();
-  console.log(chalk.bgBlue(text))
+  console.log(chalk.bgBlue(text), totalTokens)
 }
 
 run();
