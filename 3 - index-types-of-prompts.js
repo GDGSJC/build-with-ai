@@ -72,4 +72,4 @@ async function runFewShot() {
 // um exemplo
 //runOneShot();
 //multiplos examplos
-runFewShot();
+//runFewShot();
