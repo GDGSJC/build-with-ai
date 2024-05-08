@@ -5,7 +5,7 @@ import chalk from 'chalk';
 const key = process.env.API_KEY;
 const genAI = new GoogleGenerativeAI(key);
 
-//https://ai.google.dev/gemini-api/docs/api-overview#text_image_input
+//https://ai.google.dev/gemini-api/docs/api-overview#chat
 
 async function run() {
   const model = genAI.getGenerativeModel({model: 'gemini-pro'});

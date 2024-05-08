@@ -29,7 +29,7 @@ async function run() {
 
   ///Adicionar um arquivo example-file com um texto
   const readFileAsync = new Promise((resolve, reject) =>
-  fs.readFile('example-file', 'utf8', async (err, data) => {
+    fs.readFile('file/example-file', 'utf8', async (err, data) => {
     if (err) {
       console.error(err);
       reject(err);
