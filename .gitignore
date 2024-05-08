@@ -9,6 +9,7 @@ lerna-debug.log*
 
 example-file
 result.txt
+file
 img
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

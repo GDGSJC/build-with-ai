@@ -10,18 +10,24 @@ const genAI = new GoogleGenerativeAI(key);
 
 async function run() {
   const model = genAI.getGenerativeModel({model: 'gemini-pro-vision'});
-  // const prompt = "Que marca é esse headphone?";
-  //const prompt = "O que esta escrito no papel é verdadeiro, Que marca é esse headphone?";
-  const image = {
+  const prompt = "Qual a diferença dessas duas imagens considerando o escrito no papel?";
+
+  const image1 = {
     inlineData: {
       data: Buffer.from(fs.readFileSync("img/headphone e jbl.jpeg")).toString("base64"),
       mimeType: "image/png",
     },
   };
-  const result = await model.generateContent([prompt, image]);
+  const image2 = {
+    inlineData: {
+      data: Buffer.from(fs.readFileSync("img/headphone e bose.jpeg")).toString("base64"),
+      mimeType: "image/png",
+    },
+  };
+  const result = await model.generateContent([prompt, image1, image2]);
   const text = result.response.text();
 
-  console.log({text})
+  console.log(chalk.bgBlackBright(text))
 }
 
 run();
